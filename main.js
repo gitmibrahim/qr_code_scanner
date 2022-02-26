@@ -1,31 +1,61 @@
 
 
+const startButtonElem = document.querySelector('button')
 const videoElem = document.querySelector('video')
 const resultsElem = document.querySelector('#results')
+
 
 let latestResult = ''
 let latestPrintedResult
 let duplicateCount = 1
 let duplicateSpan
 
-const qrScanner = new QrScanner(videoElem, result => {
-  if (result !== latestResult) {
+startButtonElem.addEventListener('click', () => {
+  toggleButtonAndVideoDisplay()
+  qrScanner.start()
+})
+
+
+const qrScanner = new QrScanner(videoElem, ({data}) => {
+  if (data !== latestResult) {
+    resultsElem.style.display = 'block'
+
     const li = document.createElement('li')
-    li.textContent = result
+    li.textContent = data
     resultsElem.appendChild(li)
 
-    latestResult = result
+    latestResult = data
     latestPrintedResult = li
     duplicateCount = 1
     duplicateSpan = document.createElement('span')
 
-  } else {
+    resultsElem.scrollBy({
+      top: resultsElem.scrollHeight,
+      behavior: 'smooth'
+    })
+  }
+  else {
     duplicateSpan.textContent = ` (${++duplicateCount})`
     if (duplicateCount == 2) {
       latestPrintedResult.appendChild(duplicateSpan)
     }
   }
+
+  toggleButtonAndVideoDisplay()
+}, {
+  returnDetailedScanResult: true
 });
 
-qrScanner.start();
+
+const toggleButtonAndVideoDisplay = () => {
+  startButtonElem.style.display = window.getComputedStyle(startButtonElem).display === 'block' ? 'none' : 'block'
+  if (window.getComputedStyle(videoElem).opacity == 1) {
+    videoElem.style.opacity = 0
+    videoElem.style.width = '0'
+    qrScanner.stop()
+  } else {
+    videoElem.style.opacity = 1
+    videoElem.style.width = '100%'
+  }
+}
 
