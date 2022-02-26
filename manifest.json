@@ -1,23 +1,15 @@
 {
-  "$schema": "https://json.schemastore.org/web-manifest-combined.json",
-  "name": "QRCode Scanner",
-  "short_name": "QRCodeScanner",
-  "start_url": ".",
-  "display": "standalone",
   "background_color": "#333",
-  "description": "A QRCode Scanner.",
-	"browser_action": {
-		"default_title": "Allow-Control-Allow-Origin",
-		"default_popup": "index.html"
-	},
-	"permissions": [
-		"storage",
-		"webRequest",
-		"webRequestBlocking",
-		"<all_urls>",
-    "192.168.1.5",
-    "localhost",
-    "file:///**"
-	],
-  "host_permissions": ["file:///**"]
+  "description": "Scanning QR Code",
+  "display": "fullscreen",
+  "icons": [
+    {
+      "src": "icons/qr-code-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "name": "QR_Code Scanner",
+  "short_name": "QRCodeScanner",
+  "start_url": "."
 }
