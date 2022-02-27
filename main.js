@@ -18,7 +18,7 @@ startButtonElem.addEventListener('click', () => {
 
 const qrScanner = new QrScanner(videoElem, ({data}) => {
   if (data !== latestResult) {
-    resultsElem.style.display = 'block'
+    resultsElem.style.display = 'inline-block'
 
     const li = document.createElement('li')
     li.textContent = data
