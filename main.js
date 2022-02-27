@@ -43,7 +43,8 @@ const qrScanner = new QrScanner(videoElem, ({data}) => {
 
   toggleButtonAndVideoDisplay()
 }, {
-  returnDetailedScanResult: true
+  returnDetailedScanResult: true,
+  highlightScanRegion: true
 });
 
 
