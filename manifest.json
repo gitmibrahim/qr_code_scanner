@@ -1,7 +1,7 @@
 {
-  "background_color": "#333",
-  "description": "Scanning QR Code",
-  "display": "fullscreen",
+  "background_color": "#009688",
+  "description": "QR Code Scanner",
+  "display": "standalone",
   "icons": [
     {
       "src": "icons/qr-code-192.png",
@@ -11,5 +11,5 @@
   ],
   "name": "QR_Code Scanner",
   "short_name": "QRCodeScanner",
-  "start_url": "."
+  "start_url": "/qr_code_scanner/index.html"
 }
