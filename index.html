@@ -26,8 +26,13 @@
     
     <div class="container">
       <div class="button-and-video-container">
-        <button>Start Scanning...</button>
+        <div class="buttons">
+          <button>Start Scanning...</button>
+          or 
+          <input type="file" id="file" accept="image/*">
+        </div>
         <video></video>
+        <img alt="the uploaded QR Code file">
       </div>
       <ul id="results"><strong>Results: </strong></ul>
     </div>
