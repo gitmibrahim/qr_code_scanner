@@ -4,6 +4,8 @@ self.addEventListener('install', (e) => {
       '/qr_code_scanner/',
       '/qr_code_scanner/index.html',
       '/qr_code_scanner/main.js',
+      '/qr_code_scanner/qr-scanner.legacy.min.js',
+      '/qr_code_scanner/qr-scanner.legacy.min.js.map',
       '/qr_code_scanner/style.css',
       '/qr_code_scanner/icons/qr-code-192.png',
       '/qr_code_scanner/icons/qr-code-favicon.ico',
