@@ -52,10 +52,12 @@ const toggleButtonAndVideoDisplay = () => {
   if (window.getComputedStyle(videoElem).opacity == 1) {
     videoElem.style.opacity = 0
     videoElem.style.width = '0'
+    videoElem.style.height = '0'
     qrScanner.stop()
   } else {
     videoElem.style.opacity = 1
-    videoElem.style.width = '100%'
+    videoElem.style.width = 'auto'
+    videoElem.style.height = 'auto'
   }
 }
 

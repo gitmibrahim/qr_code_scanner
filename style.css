@@ -37,12 +37,17 @@ svg:hover {
   border: 20px solid var(--accent-color);
   border-radius: 15px;
   box-sizing: border-box;
+  overflow: hidden;
 }
 video {
-  opacity: 0;
   width: 0;
+  height: 0;
+  max-width: 100%;
+  max-height: 100%;
+  opacity: 0;
   border-radius: 5px;
 }
+
 #results {     
   display: inline-block;
   width: 100%;
@@ -55,8 +60,18 @@ video {
   padding: 0 20px;
   box-sizing: border-box;
 }
+#results strong {
+  position: sticky;
+  top: -2px;
+  background: #fff;
+  display: block;
+  padding: 2px 0 20px;
+}
 li {
   margin: 20px;
+}
+li:first-child {
+  margin-top: 0;
 }
 li:last-child {
   margin-bottom: 4px;
