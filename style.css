@@ -1,5 +1,27 @@
+:root {
+  --main-color: #009688;
+  --accent-color: #efefef;
+}
+
 body {
   margin: 0;
+}
+h1, p, ul, li, span, button {
+  font-family: monospace;
+}
+header {
+  padding: 20px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--main-color);
+  color: #fff;
+}
+header h1 {
+  margin: 0;
+}
+svg:hover {
+  fill: #e0e0e0;
 }
 .container {
   width: 90%;
