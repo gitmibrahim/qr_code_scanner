@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QR_Code Scanner</title>
     <link rel="shortcut icon" href="icons/qr-code-favicon.ico" type="image/x-icon">
-    <link rel="manifest" href="manifest.json?v=1.2">
-    <link rel="stylesheet" href="style.css?v=1.0">
+    <link rel="manifest" href="manifest.json?v=2">
+    <link rel="stylesheet" href="style.css?v=2">
   </head>
   <body>
     <header>
@@ -27,17 +27,20 @@
     <div class="container">
       <div class="button-and-video-container">
         <div class="buttons">
-          <button>Start Scanning...</button>
+          <button id="scan">Start Scanning...</button>
           or 
           <input type="file" id="file" accept="image/*">
         </div>
         <video></video>
         <img alt="the uploaded QR Code file">
+
+        <p id="warning">The file does not contain a valid ZATCA Qr Code</p>
+        <button id="cancel">X</button>
       </div>
       <ul id="results"><strong>Results: </strong></ul>
     </div>
 
     <script src='qr-scanner.legacy.min.js'></script>
-    <script src="main.js?v=1.0"></script>
+    <script src="main.js?v=2"></script>
   </body>
 </html>

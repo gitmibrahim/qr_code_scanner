@@ -74,6 +74,10 @@ img {
   border-radius: 5px;
 }
 
+#cancel, #warning {
+  display: none;
+}
+
 #results {     
   display: inline-block;
   width: 100%;
@@ -83,6 +87,8 @@ img {
   overflow-x: hidden;
   word-break: break-word;
   border-left: 15px solid var(--accent-color);
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
   padding: 0 20px;
   box-sizing: border-box;
 }
@@ -92,6 +98,9 @@ img {
   background: #fff;
   display: block;
   padding: 2px 0 20px;
+}
+#results ul {
+  margin-bottom: 50px;
 }
 li {
   margin: 20px;
