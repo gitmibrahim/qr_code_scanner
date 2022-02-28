@@ -1,6 +1,6 @@
 {
   "background_color": "#009688",
-  "description": "QR Code Scanner",
+  "description": "ZATCA QR Code Scanner",
   "display": "standalone",
   "icons": [
     {
@@ -9,7 +9,7 @@
       "type": "image/png"
     }
   ],
-  "name": "QR_Code Scanner",
-  "short_name": "QRCodeScanner",
+  "name": "ZATCA QR Code Scanner",
+  "short_name": "ZATCA Scanner",
   "start_url": "/qr_code_scanner/index.html"
 }
