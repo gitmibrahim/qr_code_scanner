@@ -1,4 +1,5 @@
 {
+  "theme_color": "#009688",
   "background_color": "#009688",
   "description": "ZATCA QR Code Scanner",
   "display": "standalone",
@@ -7,6 +8,17 @@
       "src": "icons/qr-code-192.png",
       "sizes": "192x192",
       "type": "image/png"
+    },
+    {
+      "src": "icons/qr-code-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/qr-code-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ],
   "name": "ZATCA QR Code Scanner",

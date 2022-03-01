@@ -1,3 +1,15 @@
+// Author: https://github.com/gitmibrahim 
+
+
+const linkNamesToBeHidden = Array.from(document.querySelectorAll('.link-name'))
+linkNamesToBeHidden.map(e => {
+  e.style.display = 'block'
+  e.style.visibility = 'hidden'
+  e.style.width = 0
+  e.style.height = 0
+  e.style.margin = 0
+  e.style.padding = 0
+})
 
 
 const buttonsContainerElem = document.querySelector('.buttons')
@@ -165,6 +177,6 @@ const tlvToText = parts => {
 // code to register sw.js
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker
-    .register('/qr_code_scanner/sw.js')
+    .register('/qr_code_scanner/sw.js?v=1.0')
     .then(() => { console.log('Service Worker Registered'); });
 }
