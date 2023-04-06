@@ -75,6 +75,7 @@ cancelButtonElem.addEventListener('click', () => {
 
 function decodeTheScan(data, media) {
   // data(base64) -> hex -> TLV -> text
+  printTheOutput(data, media)
   const hex = base64ToHex(data)
   const parts = hexToTlv(hex)
   const result = tlvToText(parts)
