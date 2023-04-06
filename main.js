@@ -75,12 +75,32 @@ cancelButtonElem.addEventListener('click', () => {
 
 function decodeTheScan(data, media) {
   // data(base64) -> hex -> TLV -> text
-  printTheOutput(data, media)
+  printOrdinaryQROutput(data, media)
+  return
   const hex = base64ToHex(data)
   const parts = hexToTlv(hex)
   const result = tlvToText(parts)
   
   printTheOutput(result, media)
+}
+
+function printOrdinaryQROutput(data, media) {
+  resultsElem.show('inline-block')
+  const childUl = document.createElement('ul')
+  const prefixLi = document.createElement('li')
+  const li = document.createElement('li')
+  
+  li.textContent = JSON.stringify(data)
+  childUl.appendChild(li)
+
+  resultsElem.appendChild(prefixLi)
+  resultsElem.appendChild(childUl)
+  resultsElem.scrollBy({
+    top: resultsElem.scrollHeight,
+    behavior: 'smooth'
+  })
+
+  toggleButtonAndVideoDisplay(media)
 }
 
 function printTheOutput(data, media) {
