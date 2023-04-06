@@ -90,7 +90,7 @@ function printOrdinaryQROutput(data, media) {
   const prefixLi = document.createElement('li')
   const li = document.createElement('li')
   
-  li.textContent = JSON.stringify(data)
+  li.textContent = data
   childUl.appendChild(li)
 
   resultsElem.appendChild(prefixLi)
